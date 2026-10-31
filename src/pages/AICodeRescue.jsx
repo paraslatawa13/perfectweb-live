@@ -5,6 +5,7 @@ import SoundFamiliar from '../components/AI Code Rescue/SoundFamiliar'
 import HowWeUnstuck from '../components/AI Code Rescue/HowWeUnstuck'
 import ProofSection from '../components/AI Code Rescue/ProofSection'
 import FreeFirstLook from '../components/AI Code Rescue/FreeFirstLook'
+import Packages from '../components/AI Code Rescue/Packages'
 const ConsultationCta = lazy(() => import("../components/ConsultationCta"));
 
 import PageBanner from "../pages/ResuableFile/Reusable";
@@ -37,11 +38,19 @@ export default function Work() {
         </section>
       </LazySection>
 
+       <LazySection>
+         <section className="Packages-Section padd">
+          <Packages />
+        </section>
+      </LazySection>
+
       <LazySection>
          <section className="FreeFirstLook-Section padd">
             <FreeFirstLook />
         </section>
       </LazySection>
+
+     
 
     </>
   );
