@@ -1,0 +1,390 @@
+p {
+  margin: 0px;
+}
+.career-main {
+  min-height: 570px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../assets/images/career/res.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.carrer-counter {
+  padding: 25px 40px;
+  background:
+    linear-gradient(256.19deg, #fe5f15 0.74%, #143063 58.01%),
+    linear-gradient(0deg, #0003, #0003);
+  border-radius: 40px;
+  position: absolute;
+  right: 30px;
+  bottom: 80px;
+  color: #fff;
+}
+
+.carrer-counter h5 {
+  font-size: 26px;
+  color: #fff;
+}
+.carrer-counter p {
+  font-size:10px;
+  font-weight: 600;
+  margin-top: 0px;
+  color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .carrer-counter {
+    position: static;
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .carrer-counter ul {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .carrer-counter li {
+    width: 30%;
+  }
+  .career-main {
+    min-height: 500px;}
+  
+  
+}
+
+
+@media (max-width: 750px) {
+  .career-btn{
+    display: flex;
+    justify-content: center;
+  }
+  .carrer-counter p {
+    font-size: 0.6rem;}
+}
+@media (max-width: 576px) {
+  .career-main {
+    padding: 40px 15px;
+    text-align: center;
+  }
+  .career-btn {
+    justify-content: center;
+  }
+  .carrer-counter {
+    padding: 20px;
+  }
+
+  .carrer-counter li {
+    width: 26%;
+  }
+  .color-box{
+    padding: 20px 20px;
+  }
+  .carrer-counter p {
+    font-size: 0.5rem;}
+ 
+}
+.org {
+    color: #fe5f15;
+    font-weight: 600;
+}
+.carrer-counter ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.carrer-counter li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+section.current-main.padd.clip-section {
+    background: var(--color-lightgray);
+}
+
+
+
+/* @media (max-width: 992px) {
+  .career-main {
+    min-height: 450px;
+    background-position: center center;
+  }
+  .carrer-counter {
+    margin-top: 100px;
+    padding: 10px 20px;
+  }
+
+  .carrer-counter {
+    padding: 0px 40px;
+    right: 0px;
+    width: auto;
+    bottom: 20px;
+  }
+
+  .carrer-counter ul {
+    gap: 0px;
+  }
+
+  .carrer-counter h5 {
+    font-size: 2rem;
+  }
+  .carrer-counter p {
+    font-size: 10px;
+  }
+  .career-btn{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .career-main {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px 15px;
+  }
+  .carrer-counter {
+    width: 100%;
+    margin-top: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    margin-top: 30px;
+  }
+
+  .carrer-counter h5 {
+    font-size: 2rem;
+  }
+
+  .carrer-counter p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .carrer-counter {
+    right: 5px;
+    width: auto;
+    bottom: 20px;
+  }
+  .carrer-counter ul {
+    gap: 10px;
+  }
+  .carrer-counter h5 {
+    font-size: 1.8rem;
+  }
+
+  .carrer-counter p {
+    font-size: 12px;
+  }
+} */
+
+.opeing {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+.opeing p {
+  color: #6d6d6d;
+}
+.icon img {
+  width: 30px;
+}
+
+.color-box {
+  /* background:
+    linear-gradient(256.19deg, #fe5f15 0.74%, #143063 58.01%),
+    linear-gradient(0deg, #0003, #0003); */
+  color: #fff;
+  padding: 0px 30px;
+}
+.exp-b {
+    font-weight: 600;
+    color: #212529;
+}
+
+.contact-form {
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+  background: #ffffff63;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+  outline: none;
+}
+
+.textarea-field {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  resize: none;
+  font-size: 16px;
+}
+.file-input {
+  padding: 10px;
+  background: #ffffff;
+}
+
+.send-btn {
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #fe5f15;
+
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  transform: translateY(-2px);
+  color: #fff;
+  background: #295199;
+}
+
+.icon {
+  font-size: 26px;
+  color: #295199;
+}
+
+.intern-card {
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  background: white;
+  transition: 0.3s;
+  height: 300px;
+}
+
+.intern-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.badge-primary {
+  background: rgba(79, 70, 229, 0.1);
+  color: #295199;
+}
+
+.badge-light {
+  background: #f1f1f1;
+  color: #666;
+}
+
+.card-image {
+  height: 100%;
+  min-height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.faq-box {
+  border-radius: 16px;
+  background: rgba(79, 70, 229, 0.05);
+  border: 1px solid rgba(79, 70, 229, 0.1);
+}
+.badge {
+  background-color: #295199;
+}
+.apply-btn {
+  background-color: #295199;
+  color: #fff;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 40px;
+  transition: 0.7s;
+}
+.apply-btn:hover {
+  background: #fe5f15;
+}
+
+.swiper-wrapper-custom {
+  position: relative;
+}
+
+.custom-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.custom-prev,
+.custom-next {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #295199;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  background: #ff4a17;
+}
+.header-main.mb-3 p {
+    color: #212529;
+}
+
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .color-box {
+    padding: 40px 20px;
+  }
+  .contact-form {
+    padding: 30px 10px;
+  }
+  .intern-card {
+    height: auto;
+  }
+  .current-main {
+    padding: 90px 0px 0px 0px;
+  }
+  .workfell {
+    padding: 40px 0px 0px 0px;
+  }
+  
+}
