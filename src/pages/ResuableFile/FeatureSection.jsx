@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TABS } from "./Featuresectioncontent";
 import { ArrowRight } from "lucide-react";
 import "./FeatureSection.css";
-import { AlertTriangle, Settings, BarChart3} from "lucide-react";
+import { AlertTriangle, Settings, BarChart3 } from "lucide-react";
 
 
 export default function FeatureSection() {

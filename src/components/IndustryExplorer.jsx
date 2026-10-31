@@ -322,7 +322,6 @@ export default function IndustryExplorer() {
           </div>
         </div>
 
-        {/* CASE STUDY */}
         <div className="ie__story" key={industryId}>
           <div className="ie__story-grid">
             {storySteps.map(({ key, title, icon: Icon, tone }) => (

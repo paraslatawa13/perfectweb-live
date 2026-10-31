@@ -31,7 +31,7 @@ const cards = [
 export default function StartSomethingNew() {
   return (
     <section className="start-container padd">
-      <div className="inner container">
+      <div className="inner-solution container">
         <h2 className="title">
           Start something <span>new</span>
         </h2>

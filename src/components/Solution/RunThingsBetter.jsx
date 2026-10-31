@@ -30,7 +30,7 @@ const items = [
 export default function RunThingsBetter() {
     return (
         <section className="run-container padd">
-            <div className="inner container">
+            <div className="inner-solution inner container">
                 <div className="left">
                     <h2 className="title">
                         Run things <span>better</span>

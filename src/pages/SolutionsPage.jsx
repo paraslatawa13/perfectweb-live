@@ -4,7 +4,8 @@ import PageBanner from "./ResuableFile/Reusable";
 import { solutionsBanner } from "./ResuableFile/bannerConfigs";
 import StartSomethingNew from '../components/Solution/StartSomethingNew';
 import RunThingsBetter from '../components/Solution/RunThingsBetter';
-import ProjectProcess from '../components/Solution/ProjectProcess';
+import ProcessProject from '../components/Solution/ProcessProject';
+import CaseSummary from '../components/Solution/CaseSummary';
 
 const Solutions = () => {
   return (
@@ -13,7 +14,10 @@ const Solutions = () => {
 
           <StartSomethingNew/>
           <RunThingsBetter/>
-          <ProjectProcess/>
+          <ProcessProject/>
+          <div className="case-study">
+            <CaseSummary/>
+          </div>
     
     
     </>
