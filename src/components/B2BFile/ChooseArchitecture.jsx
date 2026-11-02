@@ -70,7 +70,7 @@ const approach = [
 
 export default function ChooseArchitecture() {
   return (
-    <section className="arc_main padd pt-0">
+    <section className="arc_main padd pt-3">
       <div className="container">
         <div className="arc__head">
           <div>

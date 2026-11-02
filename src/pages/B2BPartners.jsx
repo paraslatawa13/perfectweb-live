@@ -9,6 +9,7 @@ import B2bFaq from "../components/B2BFile/B2bFaq";
 import ConsultationCta from "../components/ConsultationCta";
 
 import b2bHero from "../assets/images/Home/b2b-hero.webp";
+import DeliveryProcess from "../components/B2BFile/DeliveryProcess";
 
 
 const cards = [
@@ -41,7 +42,7 @@ const cards = [
 export default function B2BPartners() {
   return (
     <>
-      <section className="ph_main padd ">
+      <section className="ph_main pb padd ">
         <div className="container">
           <div className="ph__head_main">
             <div className="b2b-text col-lg-8">
@@ -92,6 +93,7 @@ export default function B2BPartners() {
       <ShapeTheBrief />
       <AiBdlc />
       <ChooseArchitecture />
+      <DeliveryProcess/>
       <B2bFaq />
       <ConsultationCta />
     </>

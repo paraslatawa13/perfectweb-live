@@ -104,7 +104,7 @@ function FaqColumn({ items, name, withLeadIcon, heading }) {
 
 export default function Faq() {
   return (
-    <section className="b2b_faq padd pt-0">
+    <section className="b2b_faq padd pt-2">
       <div className="container">
         <h2 className="main__title">
           Frequently asked questions
