@@ -99,16 +99,18 @@ const navLinks = [
       },
        { label: "Blog", href: "/blog" },
        { label: "Resources", href: "/resources" },
+        { label: "Contact", href: "/contact-us" },
+
     ],
   },
   { label: "AI Code Rescue", href: "/aicoderescue" },
   { label: "Work", href: "/work" },
+  { label: "For B2B Partners", href: "/b2b-partners" },
   { label: "For technical teams", href: "#" },
 
 
   
  
-  { label: "Contact", href: "/contact-us" },
 ];
 
 /* ---------------- MOBILE NAVIGATION ITEM ---------------- */

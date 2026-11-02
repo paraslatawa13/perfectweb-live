@@ -69,6 +69,7 @@ import Capabilities from './pages/Capabilities'
 import Work from './pages/Work'
 import Resources from './pages/Resources'
 import AICodeRescue from './pages/AICodeRescue'
+import B2BPartners from './pages/B2BPartners'
 
 function App() {
   return (
@@ -81,6 +82,7 @@ function App() {
               <Route path="/about-us" element={<About />} />
               <Route path="/solutions" element={<Solutions />} />
               <Route path="/capabilities" element={<Capabilities />} />
+              <Route path="/b2b-partners" element={<B2BPartners />} />
               <Route path="/web-development-services" element={<WebDevelopment />} />
               <Route path="/custom-wordpress-development-services" element={<CustomWordpressDevelopment />} />
               <Route path="/shopify-website-development-services" element={<ShopifyWebsiteDevelopment />} />
