@@ -12,7 +12,7 @@ const navLinks = [
   { label: "Solutions", href: "/solutions" },
   { label: "Capabilities", href: "/capabilities" },
   {
-    label: "Resources",
+    label: "Explore",
     children: [
       { label: "About Us", href: "/about-us" },
       {
@@ -98,15 +98,15 @@ const navLinks = [
         href: "/case-studies",
       },
        { label: "Blog", href: "/blog" },
-       { label: "Resources", href: "/resources" },
         { label: "Contact", href: "/contact-us" },
 
     ],
   },
+  { label: "Resources", href: "/resources" },
   { label: "AI Code Rescue", href: "/aicoderescue" },
   { label: "Work", href: "/work" },
   { label: "For B2B Partners", href: "/b2b-partners" },
-  { label: "For technical teams", href: "#" },
+
 
 
   

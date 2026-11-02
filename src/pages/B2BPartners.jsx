@@ -86,14 +86,13 @@ export default function B2BPartners() {
           </div>
         </div>
       </section>
-
       <WhatMakesUsDifferent />
       <BenchOfEngineers />
       <LittleInTheCode />
       <ShapeTheBrief />
       <AiBdlc />
       <ChooseArchitecture />
-      <DeliveryProcess/>
+      <DeliveryProcess />
       <B2bFaq />
       <ConsultationCta />
     </>
