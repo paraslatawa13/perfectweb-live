@@ -39,6 +39,11 @@ export default function ProjectProcess() {
         </p>
 
         <div className="pp-body">
+          <div className="pp_image">
+            <img
+              src="https://perfectwebservices.com/assets/CWebDevelopmentBanner-Dpql7IV3.webp"
+              alt="Project Process Illustration"/>
+          </div>
           <ol className="pp-steps">
             {steps.map((step) => (
               <li className="pp-step" key={step.id}>

@@ -246,7 +246,7 @@ export default function IndustryExplorer() {
         {/* HEADER */}
         <div className="ie__top">
           <div className="col-lg-6 col-12">
-            <p className="ie__eyebrow">EXPLORE BY INDUSTRY</p>
+            <p className="goals__badge pb-2">EXPLORE BY INDUSTRY</p>
             <h3 className="ie__headline">
               10 years in software, automation and AI &nbsp;·&nbsp; 120+ products shipped
             </h3>

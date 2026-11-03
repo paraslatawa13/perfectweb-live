@@ -107,10 +107,6 @@ const navLinks = [
   { label: "Work", href: "/work" },
   { label: "For B2B Partners", href: "/b2b-partners" },
 
-
-
-  
- 
 ];
 
 /* ---------------- MOBILE NAVIGATION ITEM ---------------- */
@@ -176,7 +172,6 @@ const MobileNavItem = ({ link, closeSidebar }) => {
 const Header = () => {
   const offcanvasRef = useRef(null);
 
-  // Open sidebar programmatically using Bootstrap API
   const openSidebar = () => {
     if (!offcanvasRef.current) return;
     let instance = Offcanvas.getInstance(offcanvasRef.current);
@@ -186,7 +181,6 @@ const Header = () => {
     instance.show();
   };
 
-  // Close sidebar properly (no leftover backdrop)
   const closeSidebar = () => {
     if (!offcanvasRef.current) return;
     const instance =

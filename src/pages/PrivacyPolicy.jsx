@@ -4,7 +4,6 @@ import blogHeader from "../assets/images/Blogs/blogHeader.webp";
 import { useMeta } from "../hooks/useMeta";
 import MetaHelmet from "../reusablecomponents/MetaHelmet";
 
-
 function PrivacyPolicy() {
     const { meta } = useMeta();
     return (

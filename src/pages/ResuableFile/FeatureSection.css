@@ -13,7 +13,7 @@
     border: 1px solid #e2e8f0;
     border-radius: 999px;
     transition: background 0.2s, color 0.2s, border-color 0.2s;
-    box-shadow: 0 4px 15px #ff6b0047;
+    box-shadow: 0 4px 15px #ff6a003a;
 }
 .st-tab:hover{background:rgba(255,255,255,.2)}
 .st-tab.on{background:#eef3ff;color:#2a4bc8;border-color:#2a4bc8;box-shadow:0 0 0 2px rgba(255,255,255,.5)}
@@ -26,10 +26,11 @@
 .st-chips{display:flex;flex-wrap:wrap;gap:8px;max-width:550px}
 .st-chip{font-size:14px;color:#2a4bc8;background:#eef3ff;border:1px solid #bcd0ff;border-radius:999px;padding:6px 16px; font-weight: 600;}
 .st-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.st-card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 22px rgba(40,70,160,.12);border:1px solid #eef1f8}
+.st-card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 22px rgba(40,70,160,.12);border:1px solid #eef1f8; transition: all 0.8s ease;}
+.st-card:hover{transform: translateY(-5px);}
 .st-ic{width:35px;height:35px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:700;margin-bottom:12px}
 .st-ic.blue{background:#2d8cf0}.st-ic.orange{background:#f5701f}.st-ic.green{background:#2fb35a}.st-ic.purple{background:#7b3fe4}
-.st-ct{font-size:17px;font-weight:700;color:#1f3a9e;margin-bottom:8px}
+.st-ct{font-size:17px;font-weight:700;color:#295199;margin-bottom:8px}
 .st-cd{font-size:14px;line-height:1.65;color:#6b7896}
 @media(max-width:820px){.st-body{grid-template-columns:1fr;gap:28px}.st-about,.st-chips{max-width:none}}
 @media(max-width:480px){.st-grid{grid-template-columns:1fr}.st-h{font-size:25px}}

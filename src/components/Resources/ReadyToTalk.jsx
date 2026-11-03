@@ -61,7 +61,7 @@ export default function ReadyToTalk() {
         <div className="rtt__cards">
           {options.map(
             ({ id, theme, icon: Icon, label, title, text, cta, link, external }) => (
-              <article key={id} className={`rtt-card rtt-card--${theme}`}>
+              <article key={id} className={`rtt-card guide-card--${theme}`}>
                 <span className="rtt-card__icon">
                   <Icon size={22} />
                 </span>
