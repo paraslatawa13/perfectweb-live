@@ -31,15 +31,9 @@ export default function Work() {
             <HowWeUnstuck />
         </section>
       </LazySection>
-
-      <LazySection>
-         <section className="Proof-Section padd p-0">
-            <ProofSection />
-        </section>
-      </LazySection>
-
-       <LazySection>
-         <section className="Packages-Section padd">
+      
+       <LazySection> 
+         <section className="Packages-Section padd pt-0">
           <Packages />
         </section>
       </LazySection>
