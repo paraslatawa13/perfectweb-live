@@ -18,9 +18,6 @@ export default function Work() {
 
       <PageBanner {...aicoderescue} />
 
-     
-
-
       <LazySection>
         <section className="sound-section padd">
             <SoundFamiliar />
@@ -43,8 +40,6 @@ export default function Work() {
             <FreeFirstLook />
         </section>
       </LazySection>
-
-     
 
     </>
   );
