@@ -114,7 +114,7 @@ export default function WebinarDetail() {
                   {touched && errors.name && <em>{errors.name}</em>}
                 </label>
                 <label className="bk-field">
-                  <span>Work email *</span>
+                  <span>Email *</span>
                   <input type="email" value={form.email} onChange={set("email")} autoComplete="email" maxLength={190} aria-invalid={touched && !!errors.email} />
                   {touched && errors.email && <em>{errors.email}</em>}
                 </label>
