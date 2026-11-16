@@ -4136,6 +4136,31 @@ section.FreeFirstLook-Section.padd {
   color: #ff5f0a;
 }
 
+.packages-container .pk-book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 13px 20px;
+  border-radius: 12px;
+  background: #ff6a13;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 106, 19, 0.28);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.packages-container .pk-book:hover,
+.packages-container .pk-book:focus-visible {
+  background: #0f2557;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(15, 37, 87, 0.25);
+}
+.packages-container .pk-book:focus-visible { outline: 3px solid #ffb88a; outline-offset: 2px; }
+
 /* bottom banner */
 .packages-container .pk-banner {
   display: flex;

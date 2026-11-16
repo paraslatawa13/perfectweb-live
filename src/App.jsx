@@ -69,6 +69,9 @@ import Capabilities from './pages/Capabilities'
 import Work from './pages/Work'
 import Resources from './pages/Resources'
 import AICodeRescue from './pages/AICodeRescue'
+import BookSession from './pages/BookSession'
+import ManageBooking from './pages/ManageBooking'
+import WebinarDetail from './pages/WebinarDetail'
 import B2BPartners from './pages/B2BPartners'
 
 function App() {
@@ -129,6 +132,9 @@ function App() {
               <Route path="/work" element={<Work />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/aicoderescue" element={<AICodeRescue />} />
+              <Route path="/aicoderescue/book" element={<BookSession />} />
+              <Route path="/booking/manage/:token" element={<ManageBooking />} />
+              <Route path="/webinars/:slug" element={<WebinarDetail />} />
 
               
               {/* <Route path="/business-guide" element={<DocumentPage />} /> */}

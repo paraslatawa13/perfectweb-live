@@ -115,6 +115,17 @@ export default function Packages() {
                   <span>{pkg.getText}</span>
                 </span>
               </div>
+
+              <a
+                className="pk-book"
+                href={`/aicoderescue/book?package=${pkg.id}`}
+                target="_blank"
+                rel="noopener"
+                aria-label={`Book now: ${pkg.title} (opens in a new tab)`}
+              >
+                Book now
+                <ArrowRight color="#fff" size={18} strokeWidth={2.6} />
+              </a>
             </article>
           ))}
         </div>

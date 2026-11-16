@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { FiArrowRight, FiUser, FiPlay, FiPlayCircle } from "react-icons/fi";
+import { webinarApi } from "../../api/bookingApi";
 
 import liveImg from "../../assets/images/Resources/webinar-live.webp";
 import recordedImg from "../../assets/images/Resources/webinar-recorded.webp";
@@ -34,7 +36,46 @@ const webinars = [
   },
 ];
 
+/** Maps a webinar from the admin panel onto the card layout below. */
+const fromApi = (w, i) => {
+  const live = w.type === "live";
+  const when = w.starts_at
+    ? new Intl.DateTimeFormat("en-GB", { weekday: "short", day: "numeric", month: "short", hour: "numeric", minute: "2-digit", hour12: true, timeZoneName: "short" }).format(new Date(w.starts_at))
+    : null;
+  return {
+    id: w.slug,
+    variant: live ? "live" : "recorded",
+    status: live ? (w.is_upcoming ? "Live" : "Past session") : "Recorded",
+    schedule: live ? when : null,
+    title: w.title,
+    text: w.summary || "",
+    cta: live ? (w.is_upcoming ? "Reserve a seat" : "Get the materials") : "Watch the recording",
+    link: `/webinars/${w.slug}`,
+    image: w.cover_image || (i % 2 === 0 ? liveImg : recordedImg),
+    liveBadge: live && w.is_upcoming,
+    playButton: true,
+    info: w.duration_minutes
+      ? { icon: live ? FiUser : FiPlayCircle, value: `${w.duration_minutes} min`, label: live ? "Expert Session" : "Step-by-step" }
+      : { icon: FiPlayCircle, value: live ? "Live" : "On demand", label: "Webinar" },
+  };
+};
+
 export default function WebinarsSection() {
+  const [items, setItems] = useState(webinars);
+
+  useEffect(() => {
+    let alive = true;
+    webinarApi
+      .list()
+      .then((list) => {
+        if (alive && list?.length) setItems(list.map(fromApi));
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, []);
+
   return (
     <section className="webinars">
       <div className="container">
@@ -49,7 +90,7 @@ export default function WebinarsSection() {
         </div>
 
         <div className="webinars__grid">
-          {webinars.map(
+          {items.map(
             ({
               id,
               variant,
@@ -80,9 +121,9 @@ export default function WebinarsSection() {
                   <h3 className="webinar-card__title">{title}</h3>
                   <p className="webinar-card__text">{text}</p>
 
-                  <a href={link} className="webinar-card__btn">
+                  <Link to={link} className="webinar-card__btn">
                     {cta} <FiArrowRight size={16} />
-                  </a>
+                  </Link>
                 </div>
 
                 {/* RIGHT */}
