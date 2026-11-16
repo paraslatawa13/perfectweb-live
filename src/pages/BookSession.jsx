@@ -42,7 +42,7 @@ const money = (amount, currency) =>
 export default function BookSession() {
   const [params, setParams] = useSearchParams();
   const [config, setConfig] = useState(null);
-  const [slots, setSlots] = useState([]);
+  const [slots, setSlots] = useState({ slots: [], taken: [] });
   const [loadError, setLoadError] = useState("");
 
   // details | otp | payment | confirming | success | error
@@ -310,7 +310,7 @@ export default function BookSession() {
                 {!config && !loadError ? (
                   <div className="bk-loading"><Loader2 className="bk-spin" size={22} /> Loading available times…</div>
                 ) : (
-                  <SlotPicker slots={slots} value={form.start_at} onChange={(v) => { set("start_at")(v); setError(""); }} />
+                  <SlotPicker slots={slots.slots} taken={slots.taken} value={form.start_at} onChange={(v) => { set("start_at")(v); setError(""); }} />
                 )}
                 {showErr("start_at") && <p className="bk-field-error">{errors.start_at}</p>}
 

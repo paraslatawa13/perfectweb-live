@@ -93,6 +93,16 @@
 .bk-time { border: 1px solid var(--bk-border); background: #fff; border-radius: 10px; padding: 10px 6px; font-weight: 700; font-size: 14px; color: var(--bk-navy); cursor: pointer; transition: all .15s; }
 .bk-time:hover { border-color: var(--bk-orange); color: var(--bk-orange); }
 .bk-time.is-active { background: var(--bk-orange); border-color: var(--bk-orange); color: #fff; box-shadow: 0 6px 16px rgba(255, 106, 19, .3); }
+.bk-day.is-full small { color: var(--bk-muted); }
+.bk-day.is-full:not(.is-active) { background: #f7f8fb; }
+.bk-time.is-taken, .bk-time.is-current { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 7px 6px; cursor: not-allowed; }
+.bk-time.is-taken { background: #f3f4f7; border-color: #eceef3; color: #a3aabb; }
+.bk-time.is-taken .bk-time-label { text-decoration: line-through; text-decoration-color: rgba(163, 170, 187, .7); }
+.bk-time.is-taken:hover { border-color: #eceef3; color: #a3aabb; }
+.bk-time.is-current { background: #eef3fb; border: 2px solid var(--bk-blue); color: var(--bk-navy); cursor: default; }
+.bk-time-badge { white-space: nowrap; font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding: 1px 7px; border-radius: 999px; line-height: 1.5; }
+.bk-time.is-taken .bk-time-badge { background: #e4e7ee; color: #7f8799; }
+.bk-time.is-current .bk-time-badge { background: var(--bk-blue); color: #fff; }
 .bk-day:focus-visible, .bk-time:focus-visible, .bk-nav:focus-visible { outline: 3px solid #ffb88a; outline-offset: 2px; }
 .bk-tz { font-size: 12.5px; color: var(--bk-muted); margin: 10px 0 0; }
 .bk-empty { padding: 18px; background: var(--bk-bg); border-radius: 12px; color: var(--bk-muted); }

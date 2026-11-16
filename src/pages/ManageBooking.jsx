@@ -17,7 +17,7 @@ export default function ManageBooking() {
   const { token } = useParams();
   const navigate = useNavigate();
   const [data, setData] = useState(null);
-  const [slots, setSlots] = useState([]);
+  const [slots, setSlots] = useState({ slots: [], taken: [] });
   const [choice, setChoice] = useState("");
   const [loadError, setLoadError] = useState("");
   const [error, setError] = useState("");
@@ -98,7 +98,7 @@ export default function ManageBooking() {
             {data.can_reschedule ? (
               <>
                 <h2 className="bk-h2">Choose a new time</h2>
-                <SlotPicker slots={slots} value={choice} onChange={setChoice} />
+                <SlotPicker slots={slots.slots} taken={slots.taken} current={b.start_at} value={choice} onChange={setChoice} />
                 <button type="button" className="bk-btn bk-btn-primary" disabled={!choice || busy} onClick={submit}>
                   {busy ? "Moving your booking…" : choice ? `Move to ${fmtWhen(choice)}` : "Pick a time above"}
                 </button>

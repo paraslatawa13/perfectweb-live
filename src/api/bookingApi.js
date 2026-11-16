@@ -16,7 +16,8 @@ export const apiError = (error, fallback = "Something went wrong. Please try aga
 
 export const bookingApi = {
   config: () => API.get("booking/config").then((r) => r.data),
-  slots: () => API.get("booking/slots").then((r) => r.data.slots),
+  /** Returns { slots: free times, taken: booked times } */
+  slots: () => API.get("booking/slots").then((r) => ({ slots: r.data.slots || [], taken: r.data.taken || [] })),
   sendOtp: (payload) => API.post("booking/otp/send", payload).then((r) => r.data),
   verifyOtp: (payload) => API.post("booking/otp/verify", payload).then((r) => r.data),
   start: (payload) => API.post("booking/start", payload).then((r) => r.data),
