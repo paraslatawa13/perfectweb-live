@@ -40,7 +40,7 @@ const webinars = [
 const fromApi = (w, i) => {
   const live = w.type === "live";
   const when = w.starts_at
-    ? new Intl.DateTimeFormat("en-GB", { weekday: "short", day: "numeric", month: "short", hour: "numeric", minute: "2-digit", hour12: true, timeZoneName: "short" }).format(new Date(w.starts_at))
+    ? new Intl.DateTimeFormat("en-GB", { weekday: "short", day: "numeric", month: "short", hour: "numeric", minute: "2-digit", hour12: true }).format(new Date(w.starts_at))
     : null;
   return {
     id: w.slug,
@@ -53,7 +53,7 @@ const fromApi = (w, i) => {
     link: `/webinars/${w.slug}`,
     image: w.cover_image || (i % 2 === 0 ? liveImg : recordedImg),
     liveBadge: live && w.is_upcoming,
-    playButton: true,
+    playButton: !live,
     info: w.duration_minutes
       ? { icon: live ? FiUser : FiPlayCircle, value: `${w.duration_minutes} min`, label: live ? "Expert Session" : "Step-by-step" }
       : { icon: FiPlayCircle, value: live ? "Live" : "On demand", label: "Webinar" },
@@ -89,7 +89,7 @@ export default function WebinarsSection() {
           <span className="webinars__badge">Medium commitment</span>
         </div>
 
-        <div className="webinars__grid">
+        <div className={`webinars__grid ${items.length === 1 ? "is-single" : ""}`}>
           {items.map(
             ({
               id,
@@ -127,7 +127,7 @@ export default function WebinarsSection() {
                 </div>
 
                 {/* RIGHT */}
-                <div className="webinar-card__media">
+                <Link to={link} className="webinar-card__media" tabIndex={-1} aria-hidden="true">
                   <img src={image} alt={title} />
 
                   {liveBadge && (
@@ -136,7 +136,7 @@ export default function WebinarsSection() {
                     </span>
                   )}
 
-                  {playButton && (
+                  {playButton && variant === "recorded" && (
                     <span className="webinar-card__play" aria-hidden="true">
                       <FiPlay size={18} />
                     </span>
@@ -149,7 +149,7 @@ export default function WebinarsSection() {
                       <span>{label}</span>
                     </div>
                   </div>
-                </div>
+                </Link>
               </article>
             )
           )}
