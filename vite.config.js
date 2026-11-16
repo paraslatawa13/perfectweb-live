@@ -43,7 +43,10 @@ export default defineConfig({
   // /src/*.jsx files are unhashed, so the browser ends up mixing stale and
   // fresh modules (causes "Invalid hook call" / duplicate React errors).
   server: {
-    allowedHosts: ["porthole-rise-hammock.ngrok-free.dev"],
+	allowedHosts: [
+		"porthole-rise-hammock.ngrok-free.dev",
+		"thegnly-nonrepeated-paislee.ngrok-free.dev",
+	],
     host: "0.0.0.0",
     headers: {
       "Cache-Control": "no-cache",
