@@ -2378,6 +2378,7 @@ footer.styles-module_chatFooter__TGv0P {display: none;}.custom-chat-btn {padding
   color: #6b7488;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -2388,7 +2389,10 @@ footer.styles-module_chatFooter__TGv0P {display: none;}.custom-chat-btn {padding
 .webinars__grid.is-single .webinar-card__title,
 .webinars__grid.is-single .webinar-card__text,
 .webinars__grid.is-single .webinar-card__schedule { max-width: 520px; }
-.webinars__grid.is-single .webinar-card__text { -webkit-line-clamp: 4; }
+.webinars__grid.is-single .webinar-card__text {
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
 .webinars__grid.is-single .webinar-card__media { aspect-ratio: 16 / 9; align-self: center; }
 @media (max-width: 991px) {
   .webinars__grid.is-single .webinar-card { grid-template-columns: 1fr; }
@@ -3819,37 +3823,6 @@ border: 1px solid #c4b5fd;
 
 
 
-@media (max-width: 1120px) {
-  .process-container .pp-body {
-    grid-template-columns: 1fr;
-  }
-
-  .process-container .pp-visual {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .process-container .pp-title {
-    font-size: 26px;
-  }
-
-  .process-container .pp-subtitle {
-    font-size: 15px;
-  }
-
-  .process-container .pp-step {
-    padding-left: 70px;
-  }
-
-  .process-container .pp-card-title {
-    font-size: 17px;
-  }
-
-  .process-container .pp-card-text {
-    font-size: 14px;
-  }
-}
 
 
 
@@ -4549,7 +4522,7 @@ section.FreeFirstLook-Section.padd {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 24px 29px 84px;
+  padding: 24px 29px 44px;
   background: #ffffff;
   border-radius: 26px;
   box-shadow:
@@ -4597,12 +4570,14 @@ section.FreeFirstLook-Section.padd {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 62px;
-  height: 60px;
-  margin-bottom: 14px;
-  border-radius: 16px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+  border-radius: 6px;
 }
-
+.twgs__icon svg {
+    width: 24px;
+}
 .twgs__card--blue .twgs__icon {
   color: #0b5cff;
   background: #d3e4fc;
@@ -4620,15 +4595,13 @@ section.FreeFirstLook-Section.padd {
 
 .twgs__option {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.3;
 }
 
-
-
 .twgs__title {
-    margin: 2px 0 12px;
+    margin: 6px 0 12px;
     font-size: 22px;
     font-weight: 600;
     line-height: 1.25;
@@ -4865,10 +4838,10 @@ section.FreeFirstLook-Section.padd {
 
 .cjc__num {
     align-self: flex-start;
-    min-width: 30px;
-    padding: 6px 10px;
+    min-width: 18px;
+    padding: 6px 6px;
     margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3;
     text-align: center;
@@ -5242,35 +5215,38 @@ section.FreeFirstLook-Section.padd {
   color: #0b1b5c;
 }
 
-/* tablet and mobile */
-@media (max-width: 960px) {
-  .bayt {
-    padding: 48px 28px 56px;
-  }
-
+@media (max-width: 1024px) {
   .bayt__inner {
     grid-template-columns: 1fr;
     gap: 32px;
   }
 
-  .bayt__heading {
-    font-size: 34px;
-  }
-
   .bayt__br {
     display: none;
   }
+
+  .aam__grid,
+  .ph__grid,
+  .wos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bws__grid,
+  .twgs__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .twgs__grid {
+    max-width: 560px;
+  }
+
+  .fp__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
 }
 
-@media (max-width: 600px) {
-  .bayt {
-    padding: 40px 16px 48px;
-  }
-
-  .bayt__heading {
-    font-size: 28px;
-  }
-
+@media (max-width: 640px) {
   .bayt__intro {
     font-size: 16px;
   }
@@ -5293,41 +5269,22 @@ section.FreeFirstLook-Section.padd {
   .bayt__cell:nth-last-child(2) {
     border-bottom: 1.5px solid #e3e8f2;
   }
-}
 
-
-/* tablet */
-@media (max-width: 1100px) {
-  
-  .aam__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .aam__grid,
+  .ph__grid,
+  .wos__grid,
+  .fp__grid {
+    grid-template-columns: 1fr;
   }
 
- 
-}
-
-/* mobile */
-@media (max-width: 640px) {
- 
-
-
-
   .aam__grid {
-    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .aam__footer {
     font-size: 17px;
   }
-}
 
-
-
-
-
-/* mobile */
-@media (max-width: 640px) {
- 
   .cjc__viewport {
     margin: 0 -16px;
     padding: 20px 16px 28px;
@@ -5335,43 +5292,6 @@ section.FreeFirstLook-Section.padd {
 
   .cjc__title {
     font-size: 22px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cjc__track,
-  .cjc__dot,
-  .cjc__btn {
-    transition: none;
-  }
-}
-
-
-
-
-/* tablet and mobile */
-@media (max-width: 900px) {
-  .bws {
-    padding: 40px 24px 52px;
-  }
-
-  .bws__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 560px) {
-  .bws {
-    padding: 36px 16px 44px;
-  }
-
-  .bws__heading {
-    font-size: 34px;
-  }
-
-  .bws__subtitle {
-    font-size: 16px;
-    margin-bottom: 28px;
   }
 
   .bws__pill {
@@ -5387,73 +5307,26 @@ section.FreeFirstLook-Section.padd {
   .bws__note {
     font-size: 16px;
   }
-}
-
-
-
-/* tablet */
-@media (max-width: 1024px) {
-  .twgs {
-    padding: 48px 28px 60px;
-  }
-
-  .twgs__grid {
-    grid-template-columns: 1fr;
-    max-width: 560px;
-  }
-}
-
-/* mobile */
-@media (max-width: 640px) {
-  .twgs {
-    padding: 40px 18px 50px;
-  }
-
-  .twgs__heading {
-    font-size: 32px;
-  }
-
-  .twgs__subtitle {
-    font-size: 16px;
-    margin-bottom: 30px;
-  }
 
   .twgs__title {
     font-size: 24px;
   }
-}
 
-
-/* tablet */
-@media (max-width: 1024px) {
-  .wos {
-    padding: 90px 32px 100px;
-  }
-
-  .wos__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* mobile */
-@media (max-width: 640px) {
   .wos {
     padding: 64px 18px 72px;
   }
 
-  .wos__heading {
+  .wos__heading,
+  .wos__subtitle {
     padding-left: 4px;
-    font-size: 32px;
   }
 
   .wos__subtitle {
-    padding-left: 4px;
     margin-bottom: 30px;
     font-size: 16px;
   }
 
   .wos__grid {
-    grid-template-columns: 1fr;
     gap: 16px;
   }
 
@@ -5470,52 +5343,13 @@ section.FreeFirstLook-Section.padd {
   .wos__text {
     font-size: 15px;
   }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  .wos__card {
-    transition: none;
-  }
-
-  .wos__card:hover {
-    transform: none;
-  }
-}
-
-@media (max-width: 1100px) {
-  .ph__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 720px) {
-  .ph {
-    padding: 48px 16px 48px;
-  }
   .ph__lead br,
   .ph__title br {
     display: none;
   }
-}
 
-@media (max-width: 520px) {
-  .ph__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Tablet */
-@media (max-width: 991px) {
   .fp__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 575px) {
-  .fp__grid {
-    grid-template-columns: 1fr;
     gap: 14px;
   }
 
@@ -5531,7 +5365,7 @@ section.FreeFirstLook-Section.padd {
   .fp__cardHead {
     gap: 12px;
   }
-  
+
   .fp__icon {
     width: 34px;
     height: 34px;
@@ -5544,19 +5378,63 @@ section.FreeFirstLook-Section.padd {
   .fp__cardText {
     font-size: 14px;
   }
-}
-
-@media (max-width: 960px) {
-  .fp__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .process-container .pp-number {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  .bws__card {
+    padding: 12px 10px 12px 10px;
+  }
+  .bws__item {
+    padding: 14px 0 12px 0px;
+  }
+  .bws__note {
+    padding: 20px 10px 20px 15px;
   }
 }
 
-@media (max-width: 560px) {
-  .fp {
-    padding: 28px 16px 40px;
+@media (prefers-reduced-motion: reduce) {
+  .cjc__track,
+  .cjc__dot,
+  .cjc__btn,
+  .wos__card {
+    transition: none;
   }
-  .fp__grid {
+
+  .wos__card:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 1120px) {
+  .process-container .pp-body {
     grid-template-columns: 1fr;
+  }
+
+  .process-container .pp-visual {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .process-container .pp-title {
+    font-size: 26px;
+  }
+
+  .process-container .pp-subtitle {
+    font-size: 15px;
+  }
+
+  .process-container .pp-step {
+    padding-left: 36px;
+  }
+
+  .process-container .pp-card-title {
+    font-size: 17px;
+  }
+
+  .process-container .pp-card-text {
+    font-size: 14px;
   }
 }
