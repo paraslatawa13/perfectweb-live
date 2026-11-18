@@ -13,7 +13,7 @@
     border: 1px solid #e2e8f0;
     border-radius: 999px;
     transition: background 0.2s, color 0.2s, border-color 0.2s;
-    box-shadow: 0 4px 15px #ff6a003a;
+    box-shadow: 0 4px 15px #ff6a0026;
 }
 .st-tab:hover{background:rgba(255,255,255,.2)}
 .st-tab.on{background:#eef3ff;color:#2a4bc8;border-color:#2a4bc8;box-shadow:0 0 0 2px rgba(255,255,255,.5)}

@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { TABS } from "./Featuresectioncontent";
-import { ArrowRight } from "lucide-react";
 import "./FeatureSection.css";
-import { AlertTriangle, Settings, BarChart3 } from "lucide-react";
 
 
 export default function FeatureSection() {
@@ -61,46 +59,7 @@ export default function FeatureSection() {
           </div>
         </div>
 
-        <div className="st-case-in">
-          <div className="st-case-box">
-
-            <div className="st-case-col">
-              <div className="st-case-icon problem">
-                <AlertTriangle size={18} />
-              </div>
-              <div>
-                <h4>Problem</h4>
-                <p>{t.story.problem}</p>
-              </div>
-            </div>
-
-            <div className="st-case-col">
-              <div className="st-case-icon approach">
-                <Settings size={18} />
-              </div>
-              <div>
-                <h4>Approach</h4>
-                <p>{t.story.approach}</p>
-              </div>
-            </div>
-
-            <div className="st-case-col">
-              <div className="st-case-icon outcome">
-                <BarChart3 size={18} />
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p className="st-case-out">{t.story.outcome}</p>
-              </div>
-            </div>
-
-          </div>
-
-          <a className="st-case-link" href="#">
-            See more capability in action
-            <ArrowRight size={16} aria-hidden="true" />
-          </a>
-        </div>
+        
       </div>
     </div>
   );
