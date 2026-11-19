@@ -1,28 +1,28 @@
 import { Fragment } from "react";
 const TOOLS = [
   {
-    label: "Website / Online store",
-    lines: ["Connects with your existing", "site, CMS or store."],
+    label: "Sales & Customers",
+    lines: ["CRMs, forms, helpdesks"],
   },
   {
-    label: "CRM / ERP",
-    lines: ["Keeps your customer, sales and", "order data in sync."],
+    label: "Money",
+    lines: ["Payment gateways, accounting and invoicing"],
   },
   {
-    label: "Integrations",
-    lines: ["Works with your email, SMS", "and other apps."],
+    label: "Messaging",
+    lines: ["WhatsApp, email, SMS"],
   },
   {
     label: "Data",
-    lines: ["Uses the data you already have, safely."],
+    lines: ["Databases, spreadsheets, analytics"],
   },
   {
-    label: "Auth",
-    lines: ["Fits with your existing sign-in and access."],
+    label: "Cloud",
+    lines: ["Hosting and storage you already run"],
   },
   {
-    label: "AI & Automation tools",
-    lines: ["Runs alongside the tools you already use."],
+    label: "Your own systems",
+    lines: ["Internal tools and legacy software"],
   },
 ];
 
@@ -37,9 +37,7 @@ export default function BuildAroundYourTools() {
             you <span>already use.</span>
           </h2>
           <p className="bayt__intro">
-            You don’t have to change what already works. We connect to the tools you use today,
-            keep your data in sync, and build what you need around them, so everything works
-            smoothly together.
+           You don’t have to replace what works. We connect to your existing systems through their APIs wherever one exists, so new capabilities slot into the way your team already operates.
           </p>
         </div>
 

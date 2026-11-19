@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
 
+// href yahan wahi hona chahiye jo Featuresectioncontent.js ke TABS mein hai.
+// Isi href se FeatureSection sahi tab dhoondta hai (koi alag id nahi chahiye).
 const STEPS = [
   {
     num: "01",
@@ -29,7 +31,7 @@ const STEPS = [
     num: "04",
     color: "blue",
     title: "Handled automatically",
-    desc: "Routine steps run in the background, with no extra re-keying or effort.",
+    desc: "Routine steps run in the background, with no extra re-keying data.",
     link: "Automation",
     href: "#automation",
   },
@@ -37,7 +39,7 @@ const STEPS = [
     num: "05",
     color: "orange",
     title: "Followed up with care",
-    desc: "AI agents reply, nudge and answer when your team is not around.",
+    desc: "AI agents reply, triage and answer from your own documents.",
     link: "Agentic AI & RAG",
     href: "#agentic-ai-rag",
   },
@@ -45,13 +47,19 @@ const STEPS = [
     num: "06",
     color: "purple",
     title: "Getting smarter",
-    desc: "Models learn from the results to predict and personalise.",
+    desc: "Models learn from the results to predict and personalize.",
     link: "Machine learning",
     href: "#machine-learning",
   },
 ];
 
 export default function CustomerJourney() {
+  const goToTab = (e, href) => {
+    e.preventDefault(); // default anchor jump roko
+    // FeatureSection is event ko sunta hai: tab active karta hai + scroll karta hai
+    window.dispatchEvent(new CustomEvent("switch-tab", { detail: href }));
+  };
+
   return (
     <section className="cjc padd pt-5">
       <div className="container">
@@ -69,16 +77,17 @@ export default function CustomerJourney() {
 
         <div className="cjc__grid">
           {STEPS.map(({ num, color, title, desc, link, href }) => (
-            <article
-              key={num}
-              className={`cjc__card cjc__card--${color}`}
-            >
+            <article key={num} className={`cjc__card cjc__card--${color}`}>
               <span className="cjc__num">{num}</span>
 
               <h3 className="cjc__title">{title}</h3>
               <p className="cjc__desc">{desc}</p>
 
-              <a className="cjc__link" href={href}>
+              <a
+                className="cjc__link"
+                href={href}
+                onClick={(e) => goToTab(e, href)}
+              >
                 {link}
                 <ArrowRight size={18} strokeWidth={2.4} />
               </a>

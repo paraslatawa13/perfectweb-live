@@ -80,7 +80,7 @@ export default function AutomationAgentsOrML() {
             <strong>Still unsure?</strong> That’s normal, and it’s the first thing we sort out on a
             call.
           </span>
-          <a className="aam__cta" href="#contact">
+          <a className="aam__cta" href="/contact-us">
             Talk to us
             <ArrowRight size={20} strokeWidth={2.2} />
           </a>
